@@ -13,6 +13,7 @@ const navLinks = [
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const logoSrc = `${import.meta.env.BASE_URL}Images/logo/cotton-logo.png`;
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -34,7 +35,7 @@ const Navigation = () => {
             className="flex items-center gap-2 whitespace-nowrap font-display text-[11px] font-semibold tracking-[0.06em] text-[#f2f2f2] sm:text-sm md:text-base"
           >
             <img
-              src="/Images/logo/cotton-logo.png"
+              src={logoSrc}
               alt="Logo reparacije letvi volana"
               className="h-8 w-8 rounded-full object-cover ring-1 ring-white/20 sm:h-12 sm:w-12"
               loading="eager"
@@ -69,14 +70,23 @@ const Navigation = () => {
             </a>
           </div>
 
-          <button
-            type="button"
-            onClick={() => setIsOpen((prev) => !prev)}
-            className="rounded-lg border border-[#333333] p-2 text-[#d9d9d9] lg:hidden"
-            aria-label="Meni"
-          >
-            {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          <div className="flex items-center gap-2 lg:hidden">
+            <a
+              href="tel:+38765123456"
+              className="inline-flex items-center gap-1 rounded-lg bg-[#b91c1c] px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#991b1b] sm:text-sm"
+            >
+              <Phone className="h-4 w-4" />
+              Pozovi
+            </a>
+            <button
+              type="button"
+              onClick={() => setIsOpen((prev) => !prev)}
+              className="rounded-lg border border-[#333333] p-2 text-[#d9d9d9]"
+              aria-label="Meni"
+            >
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+          </div>
         </div>
       </nav>
 
