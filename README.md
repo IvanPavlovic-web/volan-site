@@ -1,6 +1,6 @@
-# Volan Site
+# Servis Letvi Volana Banjaluka
 
-Volan Site is a production-ready single-page web application for a steering rack repair service. The project is built as a fast, visually strong, and mobile-optimized website that guides users from first interaction to a phone call or contact inquiry.
+Servis Letvi Volana Banjaluka is a production-ready single-page web application for a steering rack repair service. The project is built as a fast, visually strong, and mobile-optimized website that guides users from first interaction to a phone call or contact inquiry.
 
 The application is implemented with React and TypeScript, with a focus on performance, maintainable code, and predictable deployment on GitHub Pages.
 
