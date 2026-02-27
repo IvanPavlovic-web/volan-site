@@ -3,6 +3,8 @@ import Squares from "@/components/custom/Squares";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const privacyHref = `${import.meta.env.BASE_URL}#/privatnost`;
+  const termsHref = `${import.meta.env.BASE_URL}#/uslovi-koristenja`;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -50,10 +52,10 @@ const Footer = () => {
               <a href="#contact" className="block">
                 Kontakt
               </a>
-              <a href="/privatnost" className="block">
+              <a href={privacyHref} className="block">
                 Politika privatnosti
               </a>
-              <a href="/uslovi-koristenja" className="block">
+              <a href={termsHref} className="block">
                 Uslovi koristenja
               </a>
             </div>

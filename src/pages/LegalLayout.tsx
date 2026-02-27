@@ -9,12 +9,16 @@ type LegalLayoutProps = {
 };
 
 const LegalLayout = ({ title, subtitle, lastUpdated, children }: LegalLayoutProps) => {
+  const homeHref = import.meta.env.BASE_URL;
+  const privacyHref = `${import.meta.env.BASE_URL}#/privatnost`;
+  const termsHref = `${import.meta.env.BASE_URL}#/uslovi-koristenja`;
+
   return (
     <div className="min-h-screen bg-[#0d0d0d] pb-16">
       <header className="border-b border-[#242424] bg-[#101010]">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6">
           <a
-            href="/"
+            href={homeHref}
             className="inline-flex items-center gap-2 rounded-md border border-[#303030] px-3 py-2 text-sm font-medium text-[#d0d0d0]"
           >
             <ArrowLeft className="h-4 w-4" />
@@ -22,10 +26,10 @@ const LegalLayout = ({ title, subtitle, lastUpdated, children }: LegalLayoutProp
           </a>
 
           <div className="flex items-center gap-2 text-sm">
-            <a href="/privatnost" className="rounded-md border border-[#303030] px-3 py-2 text-[#c3c3c3]">
+            <a href={privacyHref} className="rounded-md border border-[#303030] px-3 py-2 text-[#c3c3c3]">
               Privatnost
             </a>
-            <a href="/uslovi-koristenja" className="rounded-md border border-[#303030] px-3 py-2 text-[#c3c3c3]">
+            <a href={termsHref} className="rounded-md border border-[#303030] px-3 py-2 text-[#c3c3c3]">
               Uslovi
             </a>
           </div>

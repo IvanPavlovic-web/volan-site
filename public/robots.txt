@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://servisvolana.ba/sitemap.xml
+Sitemap: https://ivanpavlovic-web.github.io/volan-site/sitemap.xml
