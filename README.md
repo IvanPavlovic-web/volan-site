@@ -1,73 +1,35 @@
-# React + TypeScript + Vite
+# Volan Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Volan Site je produkcijski spremna, jednosesijska web aplikacija za servis reparacije letvi volana. Projekat je razvijen kao brz, vizuelno jak i mobilno optimizovan sajt koji jasno vodi korisnika od prve sekcije do poziva ili kontakta.
 
-Currently, two official plugins are available:
+Aplikacija je implementirana u React + TypeScript okruženju, sa fokusom na performanse, citljiv kod i predvidiv deployment na GitHub Pages.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tehnologije
 
-## React Compiler
+Osnovu cine React 19, TypeScript, Vite 7 i Tailwind CSS. Za interaktivnost i UX koriste se Framer Motion (animirani carousel i sekcijske tranzicije), Lenis (smooth scrolling), Lucide ikone i Radix UI primitives. Hero sekcija koristi Three.js preko `@react-three/fiber` i `@react-three/drei`, ukljucujuci custom shader pristup za dinamicnu pozadinu (`Beams` komponenta).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Arhitektura i implementacija
 
-## Expanding the ESLint configuration
+Frontend je organizovan po sekcijama (`Hero`, `Gallery`, `Services`, `Workflow`, `Trust`, `FAQ`, `Contact`) i zajednickim custom komponentama (`Navigation`, `ServicePreloader`, `Beams`).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Routing je namerno jednostavan i bez spoljnog router paketa: aplikacija podržava glavnu landing stranicu i dve pravne podstranice (`/privatnost`, `/uslovi-koristenja`) kroz kontrolisanu path logiku u `App.tsx`.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Sajt je prilagoden GitHub Pages okruženju kroz Vite `base` konfiguraciju (`/volan-site/`) i CI/CD workflow (`.github/workflows/deploy.yml`) koji automatski build/deploy pokrece na svaki push na `main` granu.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Lokalni razvoj
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Za produkcijski build:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
+npm run preview
 ```
+
+## Produkcijski URL
+
+https://ivanpavlovic-web.github.io/volan-site/
