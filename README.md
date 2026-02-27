@@ -1,35 +1,35 @@
 # Volan Site
 
-Volan Site je produkcijski spremna, jednosesijska web aplikacija za servis reparacije letvi volana. Projekat je razvijen kao brz, vizuelno jak i mobilno optimizovan sajt koji jasno vodi korisnika od prve sekcije do poziva ili kontakta.
+Volan Site is a production-ready single-page web application for a steering rack repair service. The project is built as a fast, visually strong, and mobile-optimized website that guides users from first interaction to a phone call or contact inquiry.
 
-Aplikacija je implementirana u React + TypeScript okruženju, sa fokusom na performanse, citljiv kod i predvidiv deployment na GitHub Pages.
+The application is implemented with React and TypeScript, with a focus on performance, maintainable code, and predictable deployment on GitHub Pages.
 
-## Tehnologije
+## Technology Stack
 
-Osnovu cine React 19, TypeScript, Vite 7 i Tailwind CSS. Za interaktivnost i UX koriste se Framer Motion (animirani carousel i sekcijske tranzicije), Lenis (smooth scrolling), Lucide ikone i Radix UI primitives. Hero sekcija koristi Three.js preko `@react-three/fiber` i `@react-three/drei`, ukljucujuci custom shader pristup za dinamicnu pozadinu (`Beams` komponenta).
+The core stack includes React 19, TypeScript, Vite 7, and Tailwind CSS. Interactivity and UX are handled with Framer Motion (animated carousel and section transitions), Lenis (smooth scrolling), Lucide icons, and Radix UI primitives. The hero section uses Three.js through `@react-three/fiber` and `@react-three/drei`, including a custom shader-based background in the `Beams` component.
 
-## Arhitektura i implementacija
+## Architecture and Implementation
 
-Frontend je organizovan po sekcijama (`Hero`, `Gallery`, `Services`, `Workflow`, `Trust`, `FAQ`, `Contact`) i zajednickim custom komponentama (`Navigation`, `ServicePreloader`, `Beams`).
+The frontend is organized into feature sections (`Hero`, `Gallery`, `Services`, `Workflow`, `Trust`, `FAQ`, `Contact`) and shared custom components (`Navigation`, `ServicePreloader`, `Beams`).
 
-Routing je namerno jednostavan i bez spoljnog router paketa: aplikacija podržava glavnu landing stranicu i dve pravne podstranice (`/privatnost`, `/uslovi-koristenja`) kroz kontrolisanu path logiku u `App.tsx`.
+Routing is intentionally lightweight and does not rely on an external router package. The app supports the main landing page and two legal subpages (`/privatnost`, `/uslovi-koristenja`) through controlled path handling in `App.tsx`.
 
-Sajt je prilagoden GitHub Pages okruženju kroz Vite `base` konfiguraciju (`/volan-site/`) i CI/CD workflow (`.github/workflows/deploy.yml`) koji automatski build/deploy pokrece na svaki push na `main` granu.
+The site is configured for GitHub Pages via Vite `base` configuration (`/volan-site/`) and a CI/CD workflow (`.github/workflows/deploy.yml`) that automatically builds and deploys on every push to the `main` branch.
 
-## Lokalni razvoj
+## Local Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Za produkcijski build:
+Production build:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Produkcijski URL
+## Production URL
 
 https://ivanpavlovic-web.github.io/volan-site/
