@@ -4,7 +4,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Adresa",
-    content: "Ulica Franca Šuberte br. 42, Banja Luka 78000",
+    content: "Ulica Franca Suberte br. 42, Banja Luka 78000",
     link: "https://maps.google.com/?q=Ulica+Franca+%C5%A0uberte+br.+42+Banja+Luka",
     linkText: "Kliknite ovdje za direkcije",
   },
@@ -34,7 +34,7 @@ const Contact = () => {
           Kako do nas i kontakt informacije.
         </h2>
         <p className="mt-4 max-w-3xl text-sm text-[#9f9f9f] sm:text-base">
-          Pozovite nas ili nas posjetite na adresi Ulica Franca Šuberte br. 42, Banja
+          Pozovite nas ili nas posjetite na adresi Ulica Franca Suberte br. 42, Banja
           Luka (tranzit, preko puta Konzuma, Jumbo i Emporium centra).
           Repariramo letve volana i sisteme upravljanja za vozila iz Banje Luke
           i okoline, uz odgovor na upite u roku od 24h.
@@ -103,4 +103,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
