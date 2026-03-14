@@ -54,10 +54,11 @@ const PrivacyPage = () => {
       <h2>8. Kontakt za privatnost</h2>
       <p>
         Za sva pitanja u vezi privatnosti i obrade podataka mozete nas kontaktirati putem telefona
-        <strong> +387 65 123 456</strong>.
+        <strong> +38766515815</strong>.
       </p>
     </LegalLayout>
   );
 };
 
 export default PrivacyPage;
+

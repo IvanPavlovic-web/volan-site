@@ -59,10 +59,11 @@ const TermsPage = () => {
       <h2>9. Kontakt</h2>
       <p>
         Za sva pitanja u vezi uslova koristenja kontaktirajte nas putem telefona
-        <strong> +387 65 123 456</strong>.
+        <strong> +38766515815</strong>.
       </p>
     </LegalLayout>
   );
 };
 
 export default TermsPage;
+

@@ -62,7 +62,7 @@ const Navigation = () => {
 
           <div className="hidden items-center gap-3 md:flex">
             <a
-              href="tel:+38765123456"
+              href="tel:+38766515815"
               className="inline-flex items-center gap-2 rounded-lg bg-[#b91c1c] px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#991b1b]"
             >
               <Phone className="h-4 w-4" />
@@ -72,7 +72,7 @@ const Navigation = () => {
 
           <div className="flex items-center gap-2 lg:hidden">
             <a
-              href="tel:+38765123456"
+              href="tel:+38766515815"
               className="inline-flex items-center gap-1 rounded-lg bg-[#b91c1c] px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#991b1b] sm:text-sm"
             >
               <Phone className="h-4 w-4" />
@@ -111,7 +111,7 @@ const Navigation = () => {
 
             <div className="mt-4">
               <a
-                href="tel:+38765123456"
+                href="tel:+38766515815"
                 className="block rounded-md bg-[#b91c1c] px-3 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-[#991b1b]"
               >
                 Pozovite nas
@@ -125,3 +125,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+

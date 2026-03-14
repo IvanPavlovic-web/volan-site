@@ -4,15 +4,15 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Adresa",
-    content: "Krajiskih brigada 79, Banja Luka 78000",
-    link: "https://maps.google.com/?q=Krajiskih+brigada+79+Banja+Luka",
+    content: "Ulica Franca Šuberte br. 42, Banja Luka 78000",
+    link: "https://maps.google.com/?q=Ulica+Franca+%C5%A0uberte+br.+42+Banja+Luka",
     linkText: "Kliknite ovdje za direkcije",
   },
   {
     icon: Phone,
     title: "Telefon",
-    content: "+387 65 123 456",
-    link: "tel:+38765123456",
+    content: "+38766515815",
+    link: "tel:+38766515815",
     linkText: "Pozovite nas klikom na ovaj tekst",
   },
   {
@@ -34,7 +34,7 @@ const Contact = () => {
           Kako do nas i kontakt informacije.
         </h2>
         <p className="mt-4 max-w-3xl text-sm text-[#9f9f9f] sm:text-base">
-          Pozovite nas ili nas posjetite na adresi KrajiÅ¡kih brigada 79, Banja
+          Pozovite nas ili nas posjetite na adresi Ulica Franca Šuberte br. 42, Banja
           Luka (tranzit, preko puta Konzuma, Jumbo i Emporium centra).
           Repariramo letve volana i sisteme upravljanja za vozila iz Banje Luke
           i okoline, uz odgovor na upite u roku od 24h.
@@ -87,7 +87,7 @@ const Contact = () => {
 
           <div className="h-[320px] overflow-hidden rounded-lg border border-[#242424] bg-[#141414] sm:h-[420px] lg:h-auto">
             <iframe
-              src="https://www.google.com/maps?q=Krajiskih%20brigada%2079%20Banja%20Luka&output=embed"
+              src="https://www.google.com/maps?q=Ulica%20Franca%20%C5%A0uberte%20br.%2042%20Banja%20Luka&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -103,3 +103,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

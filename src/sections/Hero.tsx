@@ -102,7 +102,7 @@ const Hero = () => {
 
           <p className="max-w-4xl text-base leading-relaxed text-[#b0b0b0] sm:text-lg">
             Profesionalna reparacija letvi volana i sistema upravljanja u Banja
-            Luci i ≈°ire, uz zavr≈°nu kontrolu i preporuke za sigurnu vo≈ænju.
+            Luci i öire, uz zavrönu kontrolu i preporuke za sigurnu voûnju.
           </p>
 
           <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_11%,black_89%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_11%,black_89%,transparent)]">
@@ -126,7 +126,7 @@ const Hero = () => {
 
           <div className="flex flex-col gap-3 sm:flex-row">
             <a
-              href="tel:+38765123456"
+              href="tel:+38766515815"
               className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#f2f2f2] px-6 py-3 text-sm font-semibold text-[#121212] sm:w-auto"
             >
               <Phone className="h-4 w-4" />
@@ -167,3 +167,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+

@@ -147,8 +147,8 @@ const ServicePreloader = () => {
           REPARACIJE LETVI VOLANA
         </p>
 
-        <div className="mt-3 flex items-center justify-center gap-2 text-[#f2f2f2]">
-          <CarFront className="h-4 w-4" />
+        <div className="mt-3 flex flex-col items-center justify-center gap-2 text-center text-[#f2f2f2] sm:flex-row sm:text-left">
+          <CarFront className="h-7 w-7 sm:h-4 sm:w-4" />
           <p className="font-display text-lg">
             Sajt se ucitava, molimo vas pricekajte
           </p>

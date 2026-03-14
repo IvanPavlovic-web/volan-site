@@ -69,16 +69,16 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-[#9f9f9f]" />
                 <a
-                  href="https://maps.google.com/?q=Krajiskih+brigada+79+Banja+Luka"
+                  href="https://maps.google.com/?q=Ulica+Franca+%C5%A0uberte+br.+42+Banja+Luka"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Krajiskih brigada 79, Banja Luka
+                  Ulica Franca Suberte br. 42, Banja Luka
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-[#9f9f9f]" />
-                <a href="tel:+38765123456">+387 65 123 456</a>
+                <a href="tel:+38766515815">+38766515815</a>
               </li>
               <li className="flex items-center gap-2 leading-relaxed">
                 <Clock3 className="h-4 w-4 text-[#9f9f9f]" />
@@ -106,3 +106,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
