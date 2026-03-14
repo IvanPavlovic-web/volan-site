@@ -102,7 +102,7 @@ const Hero = () => {
 
           <p className="max-w-4xl text-base leading-relaxed text-[#b0b0b0] sm:text-lg">
             Profesionalna reparacija letvi volana i sistema upravljanja u Banja
-            Luci i šire, uz završnu kontrolu i preporuke za sigurnu vožnju.
+            Luci i sire, uz zavrsnu kontrolu i preporuke za sigurnu voznju.
           </p>
 
           <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_11%,black_89%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_11%,black_89%,transparent)]">
@@ -167,5 +167,6 @@ const Hero = () => {
 };
 
 export default Hero;
+
 
 
