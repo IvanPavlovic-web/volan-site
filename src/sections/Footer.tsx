@@ -78,7 +78,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-[#9f9f9f]" />
-                <a href="tel:+38766515815">+38766515815</a>
+                <div className="flex flex-wrap items-center gap-2">
+                  <a href="tel:+38766515815">+387 66 515 815</a>
+                  <span className="text-[#6f6f6f]">•</span>
+                  <a href="tel:+38765470503">+387 65 470 503</a>
+                </div>
               </li>
               <li className="flex items-center gap-2 leading-relaxed">
                 <Clock3 className="h-4 w-4 text-[#9f9f9f]" />

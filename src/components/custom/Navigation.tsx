@@ -13,7 +13,12 @@ const navLinks = [
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isCallModalOpen, setIsCallModalOpen] = useState(false);
   const logoSrc = `${import.meta.env.BASE_URL}Images/logo/cotton-logo.png`;
+  const phoneOptions = [
+    { label: "+387 66 515 815", href: "tel:+38766515815" },
+    { label: "+387 65 470 503", href: "tel:+38765470503" },
+  ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -61,23 +66,25 @@ const Navigation = () => {
           </div>
 
           <div className="hidden items-center gap-3 md:flex">
-            <a
-              href="tel:+38766515815"
+            <button
+              type="button"
+              onClick={() => setIsCallModalOpen(true)}
               className="inline-flex items-center gap-2 rounded-lg bg-[#b91c1c] px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#991b1b]"
             >
               <Phone className="h-4 w-4" />
-              Pozivite nas
-            </a>
+              Pozovi
+            </button>
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
-            <a
-              href="tel:+38766515815"
+            <button
+              type="button"
+              onClick={() => setIsCallModalOpen(true)}
               className="inline-flex items-center gap-1 rounded-lg bg-[#b91c1c] px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#991b1b] sm:text-sm"
             >
               <Phone className="h-4 w-4" />
               Pozovi
-            </a>
+            </button>
             <button
               type="button"
               onClick={() => setIsOpen((prev) => !prev)}
@@ -110,13 +117,72 @@ const Navigation = () => {
             </div>
 
             <div className="mt-4">
-              <a
-                href="tel:+38766515815"
-                className="block rounded-md bg-[#b91c1c] px-3 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-[#991b1b]"
+              <button
+                type="button"
+                onClick={() => {
+                  setIsCallModalOpen(true);
+                  setIsOpen(false);
+                }}
+                className="block w-full rounded-md bg-[#b91c1c] px-3 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-[#991b1b]"
               >
-                Pozovite nas
-              </a>
+                Pozovi
+              </button>
             </div>
+          </div>
+        </div>
+      ) : null}
+
+      {isCallModalOpen ? (
+        <div
+          className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 px-4 py-6 sm:items-center"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Izaberite broj za poziv"
+          onClick={() => setIsCallModalOpen(false)}
+        >
+          <div
+            className="w-full max-w-md rounded-2xl border border-[#2a2a2a] bg-[#111111] p-5 shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#7f7f7f]">
+                  Poziv
+                </p>
+                <h3 className="mt-1 text-lg font-semibold text-[#f2f2f2]">
+                  Izaberite broj
+                </h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsCallModalOpen(false)}
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-[#2b2b2b] text-[#cfcfcf] transition hover:border-[#3a3a3a] hover:text-white"
+                aria-label="Zatvori"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+            <div className="mt-4 grid gap-3">
+              {phoneOptions.map((phone) => (
+                <a
+                  key={phone.href}
+                  href={phone.href}
+                  className="flex items-center justify-between rounded-xl border border-[#242424] bg-[#181818] px-4 py-3 text-sm font-semibold text-[#f2f2f2] transition hover:border-[#3a3a3a] hover:bg-[#202020]"
+                >
+                  <span>{phone.label}</span>
+                  <span className="text-xs font-medium text-[#a5a5a5]">
+                    Pozovi
+                  </span>
+                </a>
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => setIsCallModalOpen(false)}
+              className="mt-4 w-full rounded-md border border-[#2b2b2b] bg-transparent px-4 py-2 text-sm font-semibold text-[#cfcfcf] transition hover:border-[#3a3a3a] hover:text-white"
+            >
+              Zatvori
+            </button>
           </div>
         </div>
       ) : null}
