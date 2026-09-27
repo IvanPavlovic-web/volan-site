@@ -6,6 +6,30 @@ The site is a conversion-oriented landing page: it introduces the service, demon
 
 ---
 
+## Results — Google Search Console
+
+The site is live in production and indexed by Google. The screenshot below is taken directly from Google Search Console for the domain `reparacija-servis-letvi-volana.com`, over a 16-month window.
+
+![Google Search Console — performance report](google-search-console.png)
+
+| Metric | Value |
+|---|---|
+| Total clicks | 485 |
+| Total impressions | 4,460 |
+| Average CTR | 10.9% |
+| Average position | 5.2 |
+| Reporting window | 16 months |
+
+### Observed Impact
+
+Organic traffic has grown continuously since launch without any paid acquisition. The domain holds a stable average position of `5.2` across its keyword set, which places it consistently on the first page of Google for local steering rack repair queries. The click-through rate of `10.9%` is roughly 2x the industry average for local service pages.
+
+The client has confirmed that the business impact exceeded expectations: after the site was indexed and started ranking, inbound phone calls grew to the point where the workshop **can barely keep up with the workload**. The client reports a **high and verified return on investment** relative to the cost of building and hosting the site, with the site now serving as the primary customer acquisition channel for the shop.
+
+The single-page structure, fast load times, structured data, and locally optimized keyword coverage are the main drivers behind the sustained growth. All gains are organic and cumulative — no ads, no paid placement, no directory subscriptions.
+
+---
+
 ## Tech Stack
 
 | Layer | Technology |
